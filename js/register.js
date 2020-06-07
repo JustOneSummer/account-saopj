@@ -1,5 +1,5 @@
 var ret = false;
-var url = "http://saopj.linxun.link";
+var url = "https://saopj.linxun.link";
 $(document).ready(function () {
     $("#username").blur(function () {
         var username = $("#username").val();
