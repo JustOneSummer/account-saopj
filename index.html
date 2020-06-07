@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SAO-Project</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/sky-forms.css">
+    <link rel="shortcut icon" href="./favicon.ico"/>
+</head>
+<body class="bg-cyan">
+<div class="body body-s">
+    <form class="sky-form" method="POST"  id="form_id">
+        <header>创建SAO通行证</header>
+        <fieldset>
+            <section>
+                <span style="color: red;" id="p_uname"></span>
+                <label class="input">
+                    <i class="icon-append icon-user"></i>
+                    <input type="text" required name="username" id="username" placeholder="账户名/游戏名">
+                    <b class="tooltip tooltip-bottom-right">请输入账户名称！</b>
+                </label>
+            </section>
+            <section>
+                <span style="color: red;" id="p_pwd"></span>
+                <label class="input">
+                    <i class="icon-append icon-lock"></i>
+                    <input type="password" required name="password" id="password" placeholder="密码">
+                    <b class="tooltip tooltip-bottom-right">请输入密码！</b>
+                </label>
+            </section>
+            <section>
+                <span style="color: red;" id="p_upwd"></span>
+                <label class="input">
+                    <i class="icon-append icon-lock"></i>
+                    <input type="password" required name="upassword" id="upassword" placeholder="再次输入密码">
+                    <b class="tooltip tooltip-bottom-right">请再次输入密码！</b>
+                </label>
+            </section>
+
+            <section>
+                <span style="color: red;" id="p_email"></span>
+                <label class="input">
+                    <i class="icon-append icon-envelope-alt"></i>
+                    <input type="text" required name="email" id="email" placeholder="电子邮箱">
+                    <b class="tooltip tooltip-bottom-right">请输入电子邮箱！</b>
+                </label>
+            </section>
+        </fieldset>
+        <fieldset>
+            <section>
+                <label class="input">
+                    <i class="icon-append icon-flag icon-4x pull-left icon-border"></i>
+                    <input type="text" required name="mibao" id="mibao" placeholder="密保问题">
+                    <b class="tooltip tooltip-bottom-right">请设置您的密保问题！</b>
+                </label>
+            </section>
+            <section>
+                <label class="input">
+                    <i class="icon-append icon-flag icon-4x pull-left icon-border"></i>
+                    <input type="text" required name="daan" id="daan" placeholder="密保答案">
+                    <b class="tooltip tooltip-bottom-right">请设置您的密保答案！</b>
+                </label>
+            </section>
+            <section>
+                <label class="checkbox"><input type="checkbox" required
+                                               name="checkbox"><i></i>我已阅读并同意相关服务条款和隐私政策</label>
+                <label class="checkbox"><a href="https://www.saopj.net/privacy-policy" target="_blank">隐私政策</a></label>
+                <label class="checkbox"><a
+                            href='https://www.saopj.net/eula' target="_blank">用户协议</a></label>
+                <!-- <h3><a href="/retrieve">找回密码</a></h3> -->
+            </section>
+        </fieldset>
+        <footer>
+            <button type="button" class="button">注册</button>
+        </footer>
+    </form>
+
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript" src="./js/register.js"></script>
+</html>
