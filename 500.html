@@ -6,13 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JustOneSummer/saopj-account/css/demo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JustOneSummer/saopj-account/css/sky-forms.css">
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JustOneSummer/saopj-account/favicon.ico" />
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JustOneSummer/saopj-account/favicon.ico"/>
+    <style>
+        body {
+            text-align: center
+        }
+    </style>
 </head>
 <body class="bg-cyan">
-    <div class="body body-s">
-        <form class="sky-form" method="POST">
-            <header>注册失败</header>
-        </form>
-    </div>
+<div class="body body-s">
+    <form class="sky-form" method="POST">
+        <header>注册失败</header>
+        <fieldset>
+            <section>
+                <div>
+                    <h1 id="result" style="color: red"></h1>
+                </div>
+            </section>
+        </fieldset>
+    </form>
+</div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/JustOneSummer/saopj-account/js/jq.js"></script>
+<script>
+    $(document).ready(function () {
+        let data = $.cookie("data");
+        $("#result").text(data.msg)
+    })
+</script>
 </html>

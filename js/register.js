@@ -73,21 +73,22 @@ $(document).ready(function () {
         }
     });
 
-    
+
     $(".button").click(function () {
-        var params  = $('#form_id').serializeArray();
+        var params = $('#form_id').serializeArray();
         var values = {};
-		 for( x in params  ){
-		 	values[params[x].name] = params[x].value;
-		 }
-         var data = JSON.stringify(values)
-         
-        $.post(url+"/api/registered/reg",params,result);
-        function result(e){
-                console.log(e)
-            if(e.code == 200){
+        for (x in params) {
+            values[params[x].name] = params[x].value;
+        }
+        var data = JSON.stringify(values)
+
+        $.post(url + "/api/registered/reg", params, result);
+
+        function result(e) {
+            if (e.code == 200) {
                 location.href = "./200.html"
-            }else{
+            } else {
+                $.cookie("data",e)
                 location.href = "./500.html"
             }
         }
