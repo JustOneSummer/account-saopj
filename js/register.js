@@ -81,9 +81,10 @@ $(document).ready(function () {
 		 	values[params[x].name] = params[x].value;
 		 }
          var data = JSON.stringify(values)
-         console.log(data)
+         
         $.post(url+"/api/registered/reg",params,result);
         function result(e){
+                console.log(e)
             if(e.code == 200){
                 location.href = "./200.html"
             }else{
